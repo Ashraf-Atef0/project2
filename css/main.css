@@ -113,7 +113,7 @@ header .container nav ul {
 header .container nav ul li {
     padding: 20px 10px;
     color: #d2d2d3;
-    transition: 0.3s;
+    transition: 0.2s;
     display: flex;
     
 }
