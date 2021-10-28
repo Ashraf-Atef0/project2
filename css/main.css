@@ -160,7 +160,9 @@ header .container .logo img {
         top: 59px;
         left: 0;
         flex-direction: column;
-
+    }
+    header .container nav ul:hover {
+        visibility: visible;
     }
     header .container nav ul li {
         padding: 20px 0px 20px 10px;
