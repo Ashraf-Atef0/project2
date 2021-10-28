@@ -1,0 +1,200 @@
+/* Genral start */
+:root {
+    --maincolor: #06a6d0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1f2021;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    /* background-image: linear-gradient(90deg,
+    #353235 0%, #353235 7%, transparent 7%, transparent 10%,
+     #353235 10%, #353235 17%, transparent 17%, transparent 20%,
+      #353235 20%, #353235 27%, transparent 27%, transparent 30%,
+       #353235 30%, #353235 37%, transparent 37%, transparent 40%,
+        #353235 40%, #353235 47%, transparent 47%, transparent 50%,
+         #353235 50%, #353235 57%, transparent 57%, transparent 60%,
+          #353235 60%, #353235 67%, transparent 67%, transparent 70%,
+           #353235 70%, #353235 77%, transparent 77%, transparent 80%,
+            #353235 80%, #353235 87%, transparent 87%, transparent 90%,
+             #353235 90%, #353235 97%, transparent 97%, transparent 100%); */
+}
+/*Extra small devices*/
+@media (max-width: 575px) { 
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 576px) { 
+    .container {
+        width: 560px;
+    }
+}
+/*Small devices*/
+@media (min-width: 768px) { 
+    .container {
+        width: 750px;
+    }
+}
+/*Large devices */
+@media (min-width: 992px) { 
+    .container {
+        width: 970px;
+    }
+}
+/*Extra large devices*/
+@media (min-width: 1200px) { 
+    .container {
+        width: 1170px;
+    }
+}
+/* Genral end */
+/* Header start */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+}
+header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+}
+header .container::after {
+    content: "";
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: #636364;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+header .container nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .container nav .select-nav {
+    display: none;
+    padding: 5px;
+    color: #dad6d7;
+    background-color: rgba(0, 0, 0, 0.315);
+    border: 1px solid #b0acaf;
+    border-radius: 25%;
+}
+header .container nav .select-nav:hover + ul {
+    display: flex;
+}
+header .container nav ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container nav ul li {
+    padding: 20px 10px;
+    color: #d2d2d3;
+    transition: 0.3s;
+    display: flex;
+    
+}
+header .container nav ul .active,
+header .container nav ul li:hover {
+    color: var(--maincolor);
+    position: relative;
+    border-bottom: 1px solid var(--maincolor);
+    z-index: 2;
+}
+header .container nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+header .container nav .search {
+    color: #b0acaf;
+    border-left: 1px solid #dad6d7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6px 0 6px 20px;
+    margin-left: 65px;
+}
+header .container .logo img {
+    height: 40px;
+    color: #d4d0d2;
+}
+/*Small devices*/
+@media (max-width: 767px) { 
+    header .container nav {
+        flex-direction: row-reverse;
+    }
+    header .container nav .select-nav{
+        display: block;
+        margin: 0 10px 0 30px;
+    }
+    header .container nav ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 59px;
+        left: 0;
+        flex-direction: column;
+    }
+    header .container nav ul li {
+        padding: 20px 0px 20px 10px;
+        width: calc(100% - 30px);
+        background-color: rgba(0, 0, 0, 0.363);
+        display: flex;
+        flex-direction: column;
+    }
+    header .container nav ul li:hover {
+        background-color: rgba(167, 191, 211, 0.342);
+        padding-left: 20px;
+    }
+}
+/* Header end */
+/* background start */
+.background {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+} 
+.background .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    column-gap: 2.7%;
+}
+.background .container div {
+    background-color: #353235;
+    /* background-image: linear-gradient(
+    90deg, transparent 0%, transparent 30%, #353235 30%, #353235 100%); */
+}
+
+/* background end */
