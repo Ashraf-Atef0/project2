@@ -101,7 +101,7 @@ header .container nav .select-nav {
     border-radius: 25%;
 }
 header .container nav .select-nav:hover + ul {
-    display: flex;
+    visibility: visible;
 }
 header .container nav ul {
     width: 80%;
@@ -154,12 +154,13 @@ header .container .logo img {
         margin: 0 10px 0 30px;
     }
     header .container nav ul {
-        display: none;
+        visibility: hidden;
         position: absolute;
         width: 100%;
         top: 59px;
         left: 0;
         flex-direction: column;
+
     }
     header .container nav ul li {
         padding: 20px 0px 20px 10px;
