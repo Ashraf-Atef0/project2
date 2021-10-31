@@ -417,7 +417,7 @@ header .container .logo img {
     left: 0;
 }
 .design .side-content {
-    width: 60%;
+    width: 55%;
     height: 60%;
     padding: 40px;
     position: absolute;
@@ -471,6 +471,7 @@ header .container .logo img {
     width: 60%;
     height: 71.5%;
     background-image: url(../images/ib.gif);
+    background-color: #f8f1e3;
     background-size: 100% 100%;
     top: 41px;
     left: 26px;
@@ -489,22 +490,18 @@ header .container .logo img {
     width: 51.5%;
     height: 61%;
     background-image: url(../images/ib.gif);
+    background-color: #f8f1e3;
     background-size: 100% 100%;
     top: 76px;
     right: -13px;
     z-index: 9;
 }
-@media (max-height: 991px) {
+@media (max-width: 991px) {
     .design .mobiles {
     left: 4%;
     bottom: -95px;
     transform: scale(1.2) scaleX(1.1);
 }
-}
-@media (max-width: 767px) {
-    .design .side-content {
-        width: 55%;
-    }
 }
 @media (max-width: 680px) {
     .design .side-content {
@@ -524,3 +521,143 @@ header .container .logo img {
     }
 }
 /* design end */
+/* portfolio start */
+.portfolio {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+}
+.portfolio .shuffle {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .shuffle li {
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.portfolio .shuffle .active {
+    background-color: var(--maincolor);
+    color: white;
+}
+.portfolio .proj-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .proj-container .p-box {
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .proj-container .p-box img {
+    width: 100%;
+    transition: 0.3s;
+}
+.portfolio .proj-container .p-box:hover img {
+    transform: skew(3deg) scale(1.1);
+}
+.portfolio .proj-container .p-box .box-text {
+    padding: 10px 40px;
+    width: 100%;
+    background-color: #ffffffe6;
+    position: absolute;
+    bottom: -100%;
+    transition: 0.3s;
+}
+.portfolio .proj-container .p-box:hover .box-text {
+    bottom: 0;
+}
+.portfolio .proj-container .p-box .box-text h4 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.portfolio .proj-container .p-box .box-text p {
+    color: var(--maincolor);
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.portfolio .more {
+    background-color: var(--maincolor);
+    color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+/*Small devices*/
+@media (min-width: 768px) { 
+    .portfolio .proj-container .p-box {
+        flex-basis: 50%;
+    }
+}
+/*Extra large devices*/
+@media (min-width: 1200px) { 
+    .portfolio .proj-container .p-box {
+        flex-basis: 25%;
+    }
+}
+/* portfolio end */
+/* video start */
+.video{
+    position: relative;
+}
+.video video {
+    width: 100%;
+}
+.video::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video .over-video {
+    width: 100%;
+    height: 40%;
+    background-color: var(--side-color);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    overflow: auto;
+}
+.video .over-video h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.video .over-video p {
+    font-weight: 300;
+    font-size: 13px;
+}
+.video .over-video input[type="button"] {
+    padding: 10px 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    font-size: 15px;
+}
+/*Extra small devices*/
+@media (max-width: 575px) { 
+.video .over-video {
+    height: 50%;
+}
+.video .over-video h4 {
+    font-size: 18px;
+}
+.video .over-video p {
+    font-size: 11px;
+}
+.video .over-video input[type="button"] {
+    padding: 5px 20px;
+    font-size: 15px;
+}
+}
+/* video end */
