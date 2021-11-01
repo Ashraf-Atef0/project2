@@ -4,7 +4,8 @@
     --secondcolor: #1f2021;
     --background-color: #ffffffd9;
     --section-padding: 70px 0;
-    --side-color: #06a8d0c9;
+    --side-color: #06a8d0b9;
+    --thirdcolor: #948f91;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -471,7 +472,7 @@ header .container .logo img {
     width: 60%;
     height: 71.5%;
     background-image: url(../images/ib.gif);
-    background-color: #f8f1e3;
+    background-color: var(--maincolor);
     background-size: 100% 100%;
     top: 41px;
     left: 26px;
@@ -490,7 +491,7 @@ header .container .logo img {
     width: 51.5%;
     height: 61%;
     background-image: url(../images/ib.gif);
-    background-color: #f8f1e3;
+    background-color: var(--maincolor);
     background-size: 100% 100%;
     top: 76px;
     right: -13px;
@@ -661,3 +662,225 @@ header .container .logo img {
 }
 }
 /* video end */
+/* about start */
+.about-us {
+    background-color: var(--background-color);
+    padding: var(--section-padding) 0;
+    overflow: hidden;
+}
+.about-us picture img {
+    width: 70%;
+    margin-top: -10%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(32%);
+}
+/* about end */
+/* statistics start */
+.statistics {
+    padding: var(--section-padding);
+    background-image: url(../images/statistics.jpg);
+    position: relative;
+}
+.statistics::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.statistics .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.statistics .container .stat-container {
+    width: 100%;
+    height: 50%;
+    background-color: var(--side-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.statistics .container .stat-container .box {
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+.statistics .container .stat-container .box i {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: var(--secondcolor);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.statistics .container .stat-container .box h5 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.statistics .container .stat-container .box p {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+@media (max-width: 767px) { 
+    .statistics .container .stat-container .box {
+        flex-basis: 100%;
+    }
+    .statistics .container .stat-container .box:not(:last-child) {
+        border-bottom: 2px solid white;
+    }
+}
+/*Small devices*/
+@media (min-width: 768px) { 
+    .statistics .container .stat-container .box {
+        flex-basis: 50%;
+    }
+}
+/*Large devices */
+@media (min-width: 992px) { 
+    .statistics .container .stat-container .box {
+        flex-basis: 25%;
+    }
+}
+/* statistics end */
+/* skills start */
+.skills {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+}
+.skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skills .container .testimonial {
+    flex-basis: 45%;
+}
+.skills .container .testimonial > h4 {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+.skills .container .testimonial > p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+.skills .container .testimonial .content {
+    margin-left: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.skills .container .testimonial .content > div {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .container .testimonial .content div img {
+    width: 20%;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+.skills .container .testimonial .content div .text {
+    flex-basis: 70%;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--thirdcolor);
+}
+.skills .container .testimonial .content div .text p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+.skills .container .testimonial .content div .text p:last-of-type {
+    text-align: end;
+    color: var(--thirdcolor);
+}
+.skills .container .testimonial .content ul {
+    display: flex;
+}
+.skills .container .testimonial .content ul li {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border: var(--thirdcolor) 1px solid;
+    border-radius: 50%;
+}
+.skills .container .testimonial .content ul li.active {
+    background-color: var(--maincolor);
+    border-color: var(--maincolor);
+}
+.skills .container .our-skills {
+    flex-basis: 45%;
+}
+.skills .container .our-skills > h4 {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+.skills .container .our-skills > p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+.skills .container .our-skills .stats {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.skills .container .our-skills .stats h4 {
+    text-transform: uppercase;
+    text-indent: 1px;
+    font-weight: 400;
+}
+.skills .container .our-skills .stats .prog {
+    width: 100%;
+    height: 20px;
+    margin-top: 2px;
+    background-color: var(--thirdcolor);
+}
+.skills .container .our-skills .stats .prog span {
+    height: 100%;
+    display: block;
+    background-color: var(--maincolor);
+    position: relative;
+}
+.skills .container .our-skills .stats .prog span::after {
+    content: attr(progress);
+    width: 22px;
+    padding: 2.5px 5px;
+    background-color: #353235;
+    color: white;
+    font-size: 11px;
+    position: absolute;
+    right: -16px;
+    top: -22px;
+}
+.skills .container .our-skills .stats .prog span::before {
+    content: "";
+    border: 6px solid transparent;
+    border-top-color: #353235;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+@media (max-width: 767px) {
+    .skills .container .testimonial {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+}
+.skills .container .our-skills {
+    flex-basis: 100%;
+}
+}
+/* skills end */
