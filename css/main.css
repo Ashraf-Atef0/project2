@@ -20,6 +20,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--secondcolor);
+    color: var(--secondcolor);
 }
 ul {
     list-style: none;
@@ -73,14 +74,12 @@ ul {
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    color: var(--secondcolor);
 }
 .main-title p {
     max-width: 500px;
     font-size: 12px;
     font-weight: 300;
     text-align: center;
-    color: var(--secondcolor);
 }
 .main-title p::before {
     content: "";
@@ -377,13 +376,11 @@ header .container .logo img {
 }
 .services .container .services-grid .service .service-text h3 {
     margin: 0 0 15px;
-    margin: var(--secondcolor);
     font-size: 20px;
     font-weight: 400;
     color: var(--maincolor);
 }
 .services .container .services-grid .service .service-text p {
-    color: var(--secondcolor);
     font-size: 12px;
     line-height: 1.7;
 }
@@ -761,14 +758,14 @@ header .container .logo img {
 .skills .container .testimonial {
     flex-basis: 45%;
 }
-.skills .container .testimonial > h4 {
+.skills .container > div > h4 {
     margin: 20px 0;
     font-size: 22px;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
 }
-.skills .container .testimonial > p {
+.skills .container > div > p {
     font-size: 12px;
     text-align: center;
     margin-bottom: 30px;
@@ -821,19 +818,6 @@ header .container .logo img {
 .skills .container .our-skills {
     flex-basis: 45%;
 }
-.skills .container .our-skills > h4 {
-    margin: 20px 0;
-    font-size: 22px;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
-}
-.skills .container .our-skills > p {
-    font-size: 12px;
-    text-align: center;
-    margin-bottom: 30px;
-    line-height: 1.7;
-}
 .skills .container .our-skills .stats {
     width: 100%;
     margin-bottom: 30px;
@@ -862,9 +846,11 @@ header .container .logo img {
     background-color: #353235;
     color: white;
     font-size: 11px;
+    text-align: center;
+    border-radius: 3px;
     position: absolute;
     right: -16px;
-    top: -22px;
+    top: -24px;
 }
 .skills .container .our-skills .stats .prog span::before {
     content: "";
@@ -872,7 +858,7 @@ header .container .logo img {
     border-top-color: #353235;
     position: absolute;
     right: -6px;
-    top: -6px;
+    top: -8px;
 }
 @media (max-width: 767px) {
     .skills .container .testimonial {
@@ -884,3 +870,131 @@ header .container .logo img {
 }
 }
 /* skills end */
+/* qoute start */
+.qoute {
+    padding: var(--section-padding);
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    position: relative;
+}
+.qoute::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.qoute .container {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.qoute .container q {
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.qoute .container q::before {
+    content: "\f10d";
+    padding: 10px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--maincolor);
+}
+.qoute .container q::after {
+    content: "\f10e";
+    padding: 10px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--maincolor);
+}
+.qoute .container span {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 400;
+}
+/* qoute end */
+/* price start */
+.price {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+    text-align: center;
+}
+.price .container .plans {
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px , 1fr));
+    gap: 30px;
+}
+.price .container .plans .plan {
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+}
+.price .container .plans .plan .head {
+    padding: 30px;
+    border: 1px solid;
+    border-color: var(--maincolor) transparent;
+}
+.price .container .plans .plan .head h4 {
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.price .container .plans .plan .head .plan-price {
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+}
+.price .container .plans .plan .head .plan-price::after {
+    content: "/MO";
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    right: -30px;
+    bottom: 15px;
+}
+.price .container .plans .plan .head .dolar::before{
+    content: "$";
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: -15px;
+    top: 13px;
+}
+.price .container .plans .plan ul {
+    border-bottom: 1px solid var(--maincolor);
+}
+.price .container .plans .plan ul li {
+    width: 60%;
+    padding: 20px 10px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+.price .container .plans .plan ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--maincolor);
+}
+.price .container .plans .plan a {
+    display: block;
+    width: 60%;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border: 1px solid var(--maincolor);
+    color: var(--secondcolor);
+    font-size: 15px;
+    text-decoration: none;
+}
+.price .container > a {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 25px auto;
+    color: white;
+    background-color: var(--maincolor);
+}
+/* price end */
