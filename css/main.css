@@ -1210,5 +1210,6 @@ footer .content p {
 footer .content p > a {
     text-decoration: none;
     color: var(--maincolor);
+    font-weight: 800;
 }
 /* footer end */
