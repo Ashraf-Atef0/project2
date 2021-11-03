@@ -128,7 +128,7 @@ input[type="submit"], input[type="button"] {
     grid-template-columns: repeat(12, auto);
     column-gap: 2.7%;
 }
-.background .container div {
+.background .container span {
     background-color: #353235;
 }
 /* background end */
