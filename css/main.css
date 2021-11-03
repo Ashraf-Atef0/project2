@@ -123,11 +123,12 @@ input[type="submit"], input[type="button"] {
 } 
 .background .container {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(12, auto);
     column-gap: 2.7%;
 }
-.background .container span {
+.background .container div {
     background-color: #353235;
 }
 /* background end */
