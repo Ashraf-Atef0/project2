@@ -2,7 +2,7 @@
 :root {
     --maincolor: #06a6d0;
     --secondcolor: #1f2021;
-    --background-color: #ffffffd9;
+    --background-color: rgba(255, 255, 255, 0.88);
     --section-padding: 70px 0;
     --side-color: #06a8d0b9;
     --thirdcolor: #948f91;
@@ -24,6 +24,9 @@ body {
 }
 ul {
     list-style: none;
+}
+input[type="submit"], input[type="button"] {
+    cursor: pointer;
 }
 .container {
     padding: 0 15px;
@@ -1090,3 +1093,117 @@ header .container .logo img {
     }
 }
 /* subscribe end */
+/* contact us */
+.contact {
+    padding: var(--section-padding);
+    background-color: var(--background-color);
+}
+.contact .container .content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .container .content form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .container .content form .m-input {
+    padding: 20px;
+    margin-bottom: 25px;
+    outline: none;
+    border: 1px solid var(--thirdcolor);
+    background-color: transparent;
+    caret-color: var(--maincolor);
+}
+.contact .container .content form .m-input[type="submit"] {
+    align-self: flex-end;
+    background-color: var(--maincolor);
+    color: white;
+}
+.contact .container .content .info {
+    width: 25%;
+}
+.contact .container .content .info h4 { 
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.contact .container .content .info a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--thirdcolor);
+}
+.contact .container .content .info div {
+    margin-bottom: 85px;
+}
+.contact .container .content .info address {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 2;
+    color: var(--thirdcolor);
+}
+@media (max-width: 575px) {
+    .contact .container .content .info {
+        width: 100%;
+    }
+    .contact .container .content .info div {
+        margin-bottom: 50px;
+    }
+    .contact .container .content form {
+        width: 100%;
+    }
+}
+/* contact end */
+/* footer start */
+footer {
+    padding: var(--section-padding);
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+footer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+footer .content {
+    width: 200px;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .content img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+footer .content h4 {
+    width: 100%;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+footer .content hr {
+    width: 100%;
+    margin: 10px 0;
+}
+footer .content a {
+    color: white;
+    margin: 0 15px;
+}
+footer .content p {
+    font-size: 12px;
+    margin-top: 50px;
+}
+/* footer end */
